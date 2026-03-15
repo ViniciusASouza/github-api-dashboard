@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github API Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+   <header class="header">
+       <h1 id="header-title">Github API Dashboard</h1>
+       <button id="login-btn" class="btn-primary" >Connect to GitHub</button>
+   </header>
+
+   <!-- PROFILE SECTION (hidden until logged in )-->
+   <section id="profile" class="profile-card hidden">
+        <img id="avatar" src="" alt="User Avatar">
+        <div class="profile-info">
+            <h2 id="username"></h2>
+            <p id="bio"></p>
+            <p id="repo-count"</p>
+        </div>
+   </section>
+
+   <!-- REPO LIST SECTION - THE GITHUB RESPOSITORY INFO WILL APPEAR HERE -->
+   <section id="repos" class="repos-section hidden">
+        <h2>My Repositories</h2>
+        <div id="repo-list"></div>
+   </section>    
+
+    <!--ERROR BOX - IF ANY ERRORS THEY WILL BE DISPLAYED HERE-->
+    <div id="error-box" class="error-box hidden"></div>    
+
+    <!--ERROR BOX-->
+    <div id="error-box" class="error-box hidden"></div>
+
+    <!--RAW JSON VIEWER THE FULL JASON RESPONSE FROM GITHUB WILL APPEAR HERE-->
+    <section id="json-viewer" class="json-section hidden">
+        <h3>Raw API Response (JSON)</h3>
+        <pre id="json-output"></pre>
+    </section>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
