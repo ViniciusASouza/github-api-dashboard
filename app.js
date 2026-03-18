@@ -1,5 +1,5 @@
 //Section 1 — Config
-const TOKEN = 'YOUR-TOKEN-HERE';
+const TOKEN = 'YOU_TOKEN_HERE';
 const API_BASE = 'https://api.github.com';  
 
 
@@ -45,12 +45,9 @@ async function fetchProfile() {
     let response;
 
     try {
-        response = await fetch(`${API_BASE}/repos/ViniciusASouza/repo-that-does-not-exist`, {
+        response = await fetch(`${API_BASE}/users`, {
             method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${TOKEN}`,
-                'Accept': 'application/vnd.github+json'
-            }
+            headers: {'Authorization': `Bearer ${TOKEN}`,'Accept': 'application/vnd.github+json'}
         });    
     } catch (error) {
         showError(`Network error — could not reach the API. Check the URL and your connection. ${error.message}`);
